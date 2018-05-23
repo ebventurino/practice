@@ -43,9 +43,10 @@ function addExcitement (sentence) {
      words.push(sentence[i])
      console.log(words)
 
-     if(words % 3 === 0) {
-         words.push(sentence[i])
-        console.log(excitement)
+     if(words.length % 3 === 0) {
+         words.push("!")
+         console.log("third word")
+    
     }
 }
 }
