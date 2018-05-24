@@ -1,4 +1,4 @@
-// PROBLEM 1
+//                                                PROBLEM 1
 
 // var animal1 = "chicken"
 // var animal2 = "monkey"
@@ -33,23 +33,28 @@
 
 //                                               PROBLEM 3
 
-
-let sentence = ["The","walrus","danced","through","the","trees"];
-let words = []
-let excitement = "!"
-function addExcitement (sentence) {
-    for(var i=0;i<=sentence.length;i++) {
-     console.log(sentence[i])
-     words.push(sentence[i])
-     console.log(words)
-
-     if(words.length % 3 === 0) {
-         words.push("!")
-         console.log("third word")
-    
+//start with an array
+let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
+//add an exclamation point to a variable
+let addExcitement = "!"
+      //declare a function
+  function overlyExcited(arrayOfWords) {
+      //add a space
+    var sentence = " ";
+     //add a for loop, loop through arrayOfWords(sentence)
+    for (var i = 0; i < arrayOfWords.length; i = i + 1) {
+      // new variable equals arrayofwords(sentence) loops
+      var currentWordsInArray = arrayOfWords[i];
+      //sentence = sentence plus a space, plus current words in the array
+      sentence = sentence + " " + currentWordsInArray; 
+       // if statement - if the word is divisible by 3, add a word plus ex point
+       if (i % 3 === 0) {
+        sentence += addExcitement + addExcitement
+      }
+      //console log the sentence
+      console.log(sentence)
     }
-}
-}
-
-addExcitement(sentence)
-
+  }
+   
+  // Invoke the function and pass in the array
+  overlyExcited(sentence);
